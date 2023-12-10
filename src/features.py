@@ -1,6 +1,6 @@
 import pandas as pd
 
-def apply_features(df):
+def apply_features(df, inputs, vehtype, fueltype, vehage):
     df = df[(df['VEHTYPE'] > 0)
             & (df['VEHTYPE'] != 6)
             & (df['VEHTYPE'] != 97)
@@ -12,6 +12,7 @@ def apply_features(df):
             & (df['VEHAGE'] > 0)
             & (df['CAR'] > 0)
             & (df['HHFAMINC'] > 0)
+            & (df['HTPPOPDN'] != -9)
             & (df['GSCOST'] != -9)
             & (df['PRICE'] > 0)
             & (df['PLACE'] > 0)
@@ -26,4 +27,4 @@ def apply_features(df):
     df.loc[df['FUELTYPE'] == 1, 'FUELTYPE'] = 'Gas'
     df.loc[df['FUELTYPE'] == 2, 'FUELTYPE'] = 'Diesel'
     df.loc[df['FUELTYPE'] == 3, 'FUELTYPE'] = 'Hybrid/Electric'
-    return df
+    return df[inputs], df[vehtype], df[fueltype], df[vehage]
