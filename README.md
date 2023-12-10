@@ -6,26 +6,42 @@ The original data comes from the National Household Travel Survey website. It ha
 ### All model visualizations and outputs will be in an "outputs" folder after running the models.
 
 ## Steps to Run Code:
-### 1. Clone the repository from Github.
-The following command will clone the repository from Github onto your local machine.
+### 1. Create directory for this project to be stored locally.
 ```
-git clone https://github.com/ryansliao/DSC-Capstone.git
+mkdir capstone_project
 ```
 
-### 2. Create a virtual environment locally.
+### 2. Clone the repository from Github.
+The following commands will clone the repository from Github onto your local machine.
+```
+git clone https://github.com/ryansliao/DSC-Capstone.git
+cd DSC-Capstone
+```
+
+### 3. Create a virtual environment locally.
 The following commands create local virtual environment.
 ```
+pip install virtualenv
 python -m venv myenv
+```
+
+For Windows:
+```
 myenv\Scripts\activate
 ```
 
-### 3. Install environment requirements.
-The following command installs all of the required libraries and packages for this project.
+For Mac/Linux:
+```
+source myenv/bin/activate
+```
+
+### 4. Install environment requirements.
+The following commands installs all of the required libraries and packages for this project.
 ```
 pip install -r requirements.txt
 ```
 
-### 4. Run code
+### 5. Run code.
 Our larger vehicle type choice model contains three separate models that you can run all at once, or individually.
 
 To run all at once:
@@ -42,4 +58,10 @@ python run.py data features fueltype
 ```
 ```
 python run.py data features vehage
+```
+
+### 6. Deactivate virtual environment.
+The following command deactivates the virtual environment once you are done running the code.
+```
+deactivate
 ```
