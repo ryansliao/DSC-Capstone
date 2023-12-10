@@ -1,6 +1,19 @@
 # DSC-Capstone
-### Accessing the files.
-For now, our code just comprises of some Jupyter notebooks that explore the National Household Travel Survey data on vehicles and households. All of our code and the data we use for it can be pulled from this repository.
 
-### Running the notebooks.
-In order to run the notebooks, you must have an environment that can open Python notebook files (.ipynb). For many of you, this will be through the DSMLP. If you do not have access to DSMLP, you can download Jupyter Notebook through Anaconda on your local system, or run the file in VSCode.
+## Some Notes:
+### Input data is already located in the repository.
+The original data comes from the National Household Travel Survey website. It has been uploaded to the repository already, so there is no need to get it yourself.
+### All model visualizations and outputs will be in the "outputs" folder after running the models.
+
+## Steps to Run Code:
+### 1. Pull the repository from Github.
+
+### 2. Create a virtual environment locally.
+python -m venv myenv
+myenv\Scripts\activate
+
+### 3. Install environment requirements.
+pip install -r requirements.txt
+
+### 4. Run code
+python run.py
