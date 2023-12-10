@@ -42,7 +42,12 @@ pip install -r requirements.txt
 ```
 
 ### 5. Run code.
-Our larger vehicle type choice model contains three separate models that you can run all at once, or individually.
+Our larger vehicle type choice model contains three separate models that you can run all at once, or individually. You can also choose to not run any models and just get the data features.
+
+To get data features:
+```
+python run.py data features
+```
 
 To run all at once:
 ```
