@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,6 +11,9 @@ from sklearn.ensemble import RandomForestClassifier
 
 from etl import get_data
 
+def create_outputs():
+    if not os.path.exists('outputs'):
+        os.makedirs('outputs')
 
 # Predicting Vehicle Type
 def preprocess_vehicle_type(vehicles):
@@ -185,6 +189,7 @@ def predict_vehicle_age(vehicles_age_df):
 
 if __name__=="__main__": 
 
+    create_outputs()
     vehicles = get_data()
 
     print("Running Vehicle Type Model...")
