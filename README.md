@@ -49,12 +49,12 @@ To get data features:
 python run.py data features
 ```
 
-To run all at once:
+To run all models at once:
 ```
 python run.py data features all
 ```
 
-To run individually:
+To run each model individually:
 ```
 python run.py data features vehtype
 ```
