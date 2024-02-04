@@ -1,6 +1,0 @@
-{
-"inputs": ["CAR", "CNTTDHH", "CDIVMSAR", "DRVRCNT", "GSCOST", "HTPPOPDN", "HHSIZE", "HHFAMINC", "HHVEHCNT", "PLACE", "PRICE", "URBAN"],
-"vehtype": "VEHTYPE",
-"fueltype": "FUELTYPE",
-"vehage": "VEHAGE"
-}
