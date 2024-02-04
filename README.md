@@ -1,4 +1,4 @@
-# DSC-Capstone
+# Q1 Project
 
 ## Some Notes:
 ### Input data is already located in the repository.
