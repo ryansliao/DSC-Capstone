@@ -14,8 +14,8 @@ mkdir capstone_project
 ### 2. Clone the repository from Github.
 The following commands will clone the repository from Github onto your local machine.
 ```
-git clone https://github.com/ryansliao/DSC-Capstone.git
-cd DSC-Capstone
+git clone -b q2_project https://github.com/ryansliao/DSC-Capstone.git
+cd q2_project
 ```
 
 ### 3. Create a virtual environment locally.
@@ -42,28 +42,6 @@ pip install -r requirements.txt
 ```
 
 ### 5. Run code.
-Our larger vehicle type choice model contains three separate models that you can run all at once, or individually. You can also choose to not run any models and just get the data features.
-
-To get data features:
-```
-python run.py data features
-```
-
-To run all models at once:
-```
-python run.py data features all
-```
-
-To run each model individually:
-```
-python run.py data features vehtype
-```
-```
-python run.py data features fueltype
-```
-```
-python run.py data features vehage
-```
 
 ### 6. Deactivate virtual environment.
 The following command deactivates the virtual environment once you are done running the code.
