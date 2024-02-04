@@ -42,6 +42,15 @@ pip install -r requirements.txt
 ```
 
 ### 5. Run code.
+To get data features:
+```
+python run.py data features
+```
+
+To run the model:
+```
+python run.py data features model
+```
 
 ### 6. Deactivate virtual environment.
 The following command deactivates the virtual environment once you are done running the code.
