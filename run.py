@@ -3,14 +3,14 @@ import json
 
 sys.path.insert(0, 'src')
 
-from etl import get_data
+from etl import merge_data
 from features import apply_features
 from model import predict_destination
 
 def main(targets):
 
     if 'data' in targets:
-        data = get_data()
+        data = merge_data()
         print("Data Read")
 
     if 'features' in targets:
