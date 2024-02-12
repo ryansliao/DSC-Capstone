@@ -10,11 +10,16 @@ The original data was provided by the San Diego Associate of Governments synthet
 ```
 mkdir capstone_project
 ```
+```
+cd capstone_project
+```
 
 ### 2. Clone the repository from Github.
 The following commands will clone the repository from Github onto your local machine.
 ```
 git clone -b q2_project https://github.com/ryansliao/DSC-Capstone.git
+```
+```
 cd q2_project
 ```
 
@@ -22,6 +27,8 @@ cd q2_project
 The following commands create local virtual environment.
 ```
 pip install virtualenv
+```
+```
 python -m venv myenv
 ```
 
