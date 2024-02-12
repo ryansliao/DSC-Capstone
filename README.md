@@ -20,7 +20,7 @@ The following commands will clone the repository from Github onto your local mac
 git clone -b q2_project https://github.com/ryansliao/DSC-Capstone.git
 ```
 ```
-cd q2_project
+cd DSC-Capstone
 ```
 
 ### 3. Create a virtual environment locally.
