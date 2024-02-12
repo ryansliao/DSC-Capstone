@@ -1,4 +1,4 @@
 {
     "inputs": ["trip_purpose", "tour_type", "tour_category", "origin", "number_of_participants", "start_time", "age", "employment_status", "student_status", "education", "household_income"],
-    "model": "MODEL"
+    "model": "destination"
 }

@@ -1,4 +1,5 @@
 import pandas as pd
+import geopandas as gpd
 
 def get_data():
     # Reading Files
@@ -6,11 +7,6 @@ def get_data():
     luz_map = gpd.read_file('input_data/LUZ')
     taz_district = pd.read_csv('input_data/TAZ/taz_to_district.csv')
     taz_luz = pd.read_csv('input_data/LUZ/xref_taz_luz.csv')
-
-    return features, luz_map, taz_district, taz_luz
-
-def merge_data():
-    features, luz_map, taz_district, taz_luz = get_data()
     
     # Merging Datasets
     taz_district = taz_district.rename(columns={'TAZ': 'household_taz'})
@@ -25,6 +21,6 @@ def merge_data():
 
     features = pd.merge(features, luz_map, how='left', on=['household_luz'])
     features = features[features['district'].isin([1, 2, 5, 6])]
-    features = features.dropna(subset=['origin', 'destination'], inplace = True)
+    features = features.dropna(subset=['origin', 'destination'])
 
     return features
