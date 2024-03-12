@@ -23,7 +23,13 @@ git clone -b q2_project https://github.com/ryansliao/SD-County-Trip-Destination-
 cd DSC-Capstone
 ```
 
-### 3. Create a virtual environment locally.
+### 3. Download raw data files from Google Drive.
+Download the "raw" folder and the "final_trips.csv" file at the link below.
+When you do this, you will get a zipped folder plus the final_trips.csv. Unzip the folder, and place the final_trips.csv into the unzipped folder.
+Then, place that folder into the "data" folder in your cloned repository.
+URL: https://drive.google.com/drive/folders/1c1fkr4h4avE5toLwMwMsUjqAJGw-68Dw?usp=drive_link
+
+### 4. Create a virtual environment locally.
 The following commands create local virtual environment.
 ```
 pip install virtualenv
