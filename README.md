@@ -1,4 +1,4 @@
-# Q2 Project
+# SD County Trip Destination Prediction Model
 
 ## Some Notes:
 ### Input data is already located in the repository.
