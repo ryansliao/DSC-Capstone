@@ -3,7 +3,7 @@
 ## Some Notes:
 ### Input data is already located in the repository.
 The original data was provided by the San Diego Association of Governments synthetic population and census data. The relevant files have been uploaded to the repository already, so there is no need to get it yourself.
-### All model visualizations and outputs will be in an "outputs" folder after running the models.
+### All model visualizations and outputs will be in an "data/out" folder after running the models.
 
 ## Steps to Run Code:
 ### 1. Create directory for this project to be stored locally.
