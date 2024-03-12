@@ -1,4 +1,4 @@
 {
-    "indir":  "data/input",
+    "indir":  "data/raw",
     "outdir": "data/out"
 }
