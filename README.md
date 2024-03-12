@@ -17,7 +17,7 @@ cd capstone_project
 ### 2. Clone the repository from Github.
 The following commands will clone the repository from Github onto your local machine.
 ```
-git clone -b q2_project https://github.com/ryansliao/DSC-Capstone.git
+git clone -b q2_project https://github.com/ryansliao/SD-County-Trip-Destination-Prediction.git
 ```
 ```
 cd DSC-Capstone
