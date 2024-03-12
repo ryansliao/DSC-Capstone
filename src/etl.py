@@ -1,26 +1,43 @@
 import pandas as pd
 import geopandas as gpd
+import os
 
-def get_data():
-    # Reading Files
-    features = pd.read_csv("input_data/feature_df.csv", low_memory=False)
-    luz_map = gpd.read_file('input_data/LUZ')
-    taz_district = pd.read_csv('input_data/TAZ/taz_to_district.csv')
-    taz_luz = pd.read_csv('input_data/LUZ/xref_taz_luz.csv')
-    
-    # Merging Datasets
-    taz_district = taz_district.rename(columns={'TAZ': 'household_taz'})
-    features = pd.merge(features, taz_district, how='left', on=['household_taz'])
-    luz_map = luz_map.rename(columns={'LUZ': 'household_luz'})
-    luz_dict = taz_luz[['taz', 'luz']].to_dict('list')
-    luz_dict_2 = dict(map(lambda i,j: (i,j), luz_dict['taz'], luz_dict['luz']))
-    features = features.rename(columns={'household_taz': 'household_luz'})
-    features['household_luz'] = features['household_luz'].map(luz_dict_2)
-    features['destination'] = features['destination'].map(luz_dict_2)
-    features['origin'] = features['origin'].map(luz_dict_2)
+def read_features(datadir):
+    if not os.path.exists(datadir):
+        os.makedirs(datadir)
+    fp = os.path.join(datadir, 'feature_df.csv')
+    return pd.read_csv(fp, low_memory=False)
 
-    features = pd.merge(features, luz_map, how='left', on=['household_luz'])
-    features = features[features['district'].isin([1, 2, 5, 6])]
-    features = features.dropna(subset=['origin', 'destination'])
+def read_luz(datadir):
+    if not os.path.exists(datadir):
+        os.makedirs(datadir)
+    fp = os.path.join(datadir, 'LUZ')
+    return gpd.read_file(fp)
 
-    return features
+def read_taz_district(datadir):
+    if not os.path.exists(datadir):
+        os.makedirs(datadir)
+    fp = os.path.join(datadir, 'TAZ/taz_to_district.csv')
+    return pd.read_csv(fp)
+
+def read_taz_luz(datadir):
+    if not os.path.exists(datadir):
+        os.makedirs(datadir)
+    fp = os.path.join(datadir, 'LUZ/xref_taz_luz.csv')
+    return pd.read_csv(fp)
+
+def read_luz_distance(datadir):
+    if not os.path.exists(datadir):
+        os.makedirs(datadir)
+    fp = os.path.join(datadir, 'LUZ/auto_AM_2022.csv')
+    return pd.read_csv(fp)
+
+def get_data(indir, outdir):
+    features = read_features(indir)
+    luz_map = read_luz(indir)
+    taz_district = read_taz_district(indir)
+    taz_luz = read_taz_luz(indir)
+    luz_distance = read_luz_distance(indir)
+    if not os.path.exists(outdir):
+        os.makedirs(outdir)
+    return features, luz_map, taz_district, taz_luz, luz_distance
