@@ -8,10 +8,10 @@ The original data was provided by the San Diego Association of Governments synth
 ## Steps to Run Code:
 ### 1. Create directory for this project to be stored locally.
 ```
-mkdir capstone_project
+mkdir sd_trip_distance_pred
 ```
 ```
-cd capstone_project
+cd sd_trip_distance_pred
 ```
 
 ### 2. Clone the repository from Github.
@@ -20,7 +20,7 @@ The following commands will clone the repository from Github onto your local mac
 git clone -b q2_project https://github.com/ryansliao/SD-County-Trip-Destination-Prediction.git
 ```
 ```
-cd DSC-Capstone
+cd SD-County-Trip-Destination-Prediction
 ```
 
 ### 3. Download raw data files from Google Drive.
