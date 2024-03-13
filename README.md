@@ -48,13 +48,13 @@ For Mac/Linux:
 source myenv/bin/activate
 ```
 
-### 4. Install environment requirements.
+### 5. Install environment requirements.
 The following commands installs all of the required libraries and packages for this project.
 ```
 pip install -r requirements.txt
 ```
 
-### 5. Run code.
+### 6. Run code.
 To get data features:
 ```
 python run.py data features
@@ -65,7 +65,7 @@ To run the model:
 python run.py data features model
 ```
 
-### 6. Deactivate virtual environment.
+### 7. Deactivate virtual environment.
 The following command deactivates the virtual environment once you are done running the code.
 ```
 deactivate
