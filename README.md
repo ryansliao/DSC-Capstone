@@ -1,8 +1,8 @@
 # SD County Trip Destination Prediction Model
 
-## Some Notes:
-### Input data is already located in the repository.
-The original data was provided by the San Diego Association of Governments synthetic population and census data. The relevant files have been uploaded to the repository already, so there is no need to get it yourself.
+We have collaborated with the San Diego Association of Governments (SANDAG) to improve upon their existing activity based model (ABM). An ABM is a series of models which utilizes a synthetically generated population and produces daily travel habits for that population. The idea is to run this series of models to get a better understanding of the population and how it interacts with the area they live in. We can then use these insights to make better public policy decisions. However, many of these models are slow and inefficient. ABMs predominantly features statistical models that take a long time to process millions of trips and people to produce a final result. Our goal was to introduce machine learning methodology to these models, which would hopefully increase time efficiency while not sacrificing performance and accuracy. We were able to accomplish this goal by using a decision tree classifier, SMOTE to address data class imbalance, and a grid search how tune our parameters to optimize our model's final performance. This method increased time efficiency by ~9x and produced an almost identical trip distance distribution as SANDAG's model, while maintaining an approximate F1 score of 73%. We deem these final metrics as satisfactory considering our original goal.
+
+The original data was provided by the San Diego Association of Governments synthetic population and census data. The relevant files have to be downloaded from the Google Drive link below.
 ### All model visualizations and outputs will be in the "data/out" folder after running the models.
 
 ## Steps to Run Code:
